@@ -10,3 +10,4 @@ document.getElementById("quantity").addEventListener("input", function () {
 
   document.getElementById("total").innerHTML = "Rs. " + calc;
 });
+

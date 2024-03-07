@@ -13,8 +13,8 @@
         <form action="" method="POST">
             <table class="tbl-30 color-green">
                 <tr>
-                    <td>Full Name: </td>
-                    <td><input type="text" name="full_name"></td>
+                    <td>Email </td>
+                    <td><input type="email" name="email"></td>
                 </tr>
                 <tr>
                     <td>Username: </td>
@@ -48,14 +48,14 @@ if(isset($_POST['submit'])){
         
         //get thee data from the form
 
-        $full_name = $_POST['full_name'];
+        $email = $_POST['email'];
         $username = $_POST['username'];
         $password = md5( $_POST['password']); // password encryped with md5 (one way encryption)
 
 
         //1 SQL QUERY TO SAVE THE DATA INTO THE DATABASE
         $sql = "INSERT INTO tbl_admin SET
-                full_name = '$full_name',
+                email = '$email',
                 username = '$username',
                 password = '$password'
         ";
@@ -78,7 +78,6 @@ if(isset($_POST['submit'])){
 
             //Redirect Page to manage admin once admin is added
             header('location:'.SITEURL.'admin/manage-admin.php');
-
 
         }
         else

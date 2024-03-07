@@ -21,7 +21,7 @@
                     if($count == 1){
                         $row = mysqli_fetch_assoc($res);
 
-                        $full_name = $row["full_name"];
+                        $email = $row["email"];
                         $username = $row['username'];
                     }
                     else{
@@ -36,9 +36,9 @@
             <form action="" method="POST">
                 <table class='tbl-full color-green'>
                        <tr>
-                        <td>Full Name: </td>
+                        <td>Email: </td>
                         <td>
-                            <input type="text" name="full_name" value="<?php echo $full_name?>">
+                            <input type="text" name="email" value="<?php echo $email?>">
                         </td>
                        </tr> 
 
@@ -70,13 +70,13 @@
 
         //get all the value from the form
     $id = $_POST['id'];
-    $full_name = $_POST['full_name'];
+    $email = $_POST['email'];
     $username = $_POST['username'];
         
     
     //sql query to update the table
     $sql = "UPDATE tbl_admin SET
-    full_name = '$full_name',
+    email = '$email',
     username = '$username'
     WHERE id=$id" ;
 

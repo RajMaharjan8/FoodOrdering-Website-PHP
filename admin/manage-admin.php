@@ -41,7 +41,7 @@
                 <table class="tbl-full color-green btn-text">
                         <tr>
                                 <th>S.N.</th>
-                                <th>Full Name</th>
+                                <th>Email</th>
                                 <th>Username</th>
                                 <th>Actions</th>
 
@@ -72,14 +72,14 @@
                                                         
                                                         //getting individual data
                                                         $id = $rows['id'];
-                                                        $full_name=$rows['full_name'];
+                                                        $email=$rows['email'];
                                                         $username = $rows['username'];
 
                                                         //displaying the values in our table
                                                         ?>
                                                         <tr>
                                                                 <td><?php echo $sn++;?></td>
-                                                                <td><?php echo $full_name?></td>
+                                                                <td><?php echo $email?></td>
                                                                 <td><?php echo $username?></td>
                                                                 <td>
                                                                         <a href="<?php echo SITEURL;?>admin/update-admin.php?id=<?php echo $id?>" class="btn-secondary">Update Admin</a>
