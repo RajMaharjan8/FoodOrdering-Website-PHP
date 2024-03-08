@@ -1,4 +1,12 @@
-<?php include('partials-front/menu.php')?>
+<?php include('partials-front/menu.php');
+  if (! isset($_SESSION['user'])){
+    $_SESSION['message'] = "Please login to order food";
+    $_SESSION['route'] = "order.php?id=".$_GET['id'];
+    header('location:'.SITEURL.'user_login.php');
+    exit();
+}  
+
+?>
 
 <?php 
     if(isset($_GET['id'])){
@@ -23,7 +31,6 @@
             header('location:'.SITEURL);
 
         }
-
 
     }
     else

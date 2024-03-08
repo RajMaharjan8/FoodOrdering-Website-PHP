@@ -28,7 +28,7 @@ if(isset($_SESSION['user'])){
         <h1>Admin Log In</h1>
         <?php  
         if(isset($_SESSION['login'])){
-            echo $_SESSION['login'];
+            echo "<p style='color: #ff0000; text-align: center;'>".$_SESSION['login']."</p>";
             unset($_SESSION['login']);
         }
 
@@ -69,14 +69,14 @@ if(isset($_SESSION['user'])){
 
         if($count == 1){
             // user available
-            $_SESSION['login'] = '<div class="success">Sucessfully Loged In</div>';
+            $_SESSION['login'] = 'Sucessfully Loged In';
             $_SESSION['user'] = $username; // to check whether the user is login or not
 
             header('location:'.SITEURL.'admin/');
         }
         else
         {
-            $_SESSION['login']="<div class='error'>Failed to Log In</div>" ;
+            $_SESSION['login']="Invalid Credentials" ;
             // user not available
             header('location:'.SITEURL.'admin/login.php');
 
