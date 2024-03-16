@@ -71,12 +71,12 @@ if (isset($_POST['submit'])) {
         if ($res == TRUE) {
             $_SESSION['user'] = $username;
 
-            if(isset($_SESSION['route'])){
-                header('location:'.SITEURL.$_SESSION['route']);
+            if (isset($_SESSION['route'])) {
+                header('location:' . SITEURL . $_SESSION['route']);
                 unset($_SESSION['message']);
                 exit();
-            }else{
-                header('location:'.SITEURL);
+            } else {
+                header('location:' . SITEURL);
             }
         } else {
             $_SESSION['register_message'] = "Fail to register user";

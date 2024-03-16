@@ -33,8 +33,8 @@ if (isset($_SESSION['user'])) {
         }
         ?>
         <form action="" method="POST" class="register-form" onsubmit=" return confirmPassword(), preventDefault(event)">
-            <input type="text" name="username" placeholder="Username" id="username" "/>
-            <input type=" email" name="email" placeholder="Email" id="email" />
+            <input type="text" name="username" placeholder="Username" id="username" />
+            <input type=" email" class="email" name="email" placeholder="Email" id="email" style="padding:10px 20px; width:90%; margin:1rem 0" />
             <div class="input-container">
                 <input type="password" name="password" placeholder="Password" id="password" onkeyup="checkPasswordStrength()" />
                 <button type="button" class="toggle-password" onclick="togglePasswordVisibility('password')">Show</button>
