@@ -30,7 +30,7 @@ if (!isset($_SESSION['email'])) {
                     <td>
                         <div class="order-label">Full Name:</div>
                     </td>
-                    <td><input type="text" value="<?php echo ($name) ?>" class=input-responsive" name='fullname'></td>
+                    <td><input type="text" value="<?php echo ($name) ?>" class="input-responsive" name='fullname'></td>
                 </tr>
 
                 <tr>

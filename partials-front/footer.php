@@ -1,25 +1,24 @@
  <section class="social">
-        <div class="container text-center">
-            <ul>
-                <li>
-                    <a href="#"><img src="https://img.icons8.com/fluent/50/000000/facebook-new.png"/></a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/mr_rajm8/"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
-                </li>
-                <li>
-                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
-                </li>
-            </ul>
-        </div>
-    </section>
+     <div class="container text-center">
+         <ul>
+             <li>
+                 <a href="#"><img src="https://img.icons8.com/fluent/50/000000/facebook-new.png" /></a>
+             </li>
+             <li>
+                 <a href="https://www.instagram.com/"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png" /></a>
+             </li>
 
-    <section class="footer">
-        <div class="container text-center color-green">
-            <p>All rights reserved. </p>
-        </div>
-    </section>
-  
+         </ul>
+     </div>
+ </section>
 
-</body>
-</html>
+ <section class="footer">
+     <div class="container text-center color-green">
+         <p>All rights reserved. </p>
+     </div>
+ </section>
+
+
+ </body>
+
+ </html>
