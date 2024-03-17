@@ -1,7 +1,7 @@
 <?php include('partials-front/menu.php');
 
 if (!isset($_SESSION['email'])) {
-    $_SESSION['message'] = "Please login to order food";
+    $_SESSION['message'] = "Please login to send response";
     header('location:' . SITEURL . 'user_login.php');
     exit();
 }
