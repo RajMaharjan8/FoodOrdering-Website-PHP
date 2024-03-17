@@ -1,6 +1,6 @@
 <?php include('partials-front/menu.php');
 
-if (isset($_SESSION['user'])) {
+if (isset($_SESSION['email'])) {
     header('location:' . SITEURL);
 }
 ?>
