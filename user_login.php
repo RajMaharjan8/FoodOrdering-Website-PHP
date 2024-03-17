@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
     if ($count == 1) {
         $row = mysqli_fetch_assoc($res);
         $username = $row['username'];
-        $_SESSION['user'] = $username;
+        $_SESSION['email'] = $email;
 
         if (isset($_SESSION['route'])) {
             header('location:' . SITEURL . $_SESSION['route']);

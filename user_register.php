@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
         $res = mysqli_query($conn, $query);
 
         if ($res == TRUE) {
-            $_SESSION['user'] = $username;
+            $_SESSION['email'] = $email;
 
             if (isset($_SESSION['route'])) {
                 header('location:' . SITEURL . $_SESSION['route']);
