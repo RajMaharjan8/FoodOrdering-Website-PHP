@@ -11,32 +11,33 @@ if (!isset($_SESSION['email'])) {
     <div class="container-contact">
         <h2 class="text-center color-green">Contact Us</h2>
         <form action="" class="contact" method='post'>
+            <?php
+            $user_data_query = "SELECT * FROM users WHERE email = '" . $_SESSION['email'] . "'";
+            $run_query = mysqli_query($conn, $user_data_query);
+            $count = mysqli_num_rows($run_query);
+            if ($count == 1) {
+                $get_row = mysqli_fetch_assoc($run_query);
+                $name = $get_row['username'];
+                $email = $get_row['email'];
+            } else {
+                $name = "";
+                $email = "";
+            }
+
+            ?>
             <table class='tbl-full color-green text-larger'>
                 <tr>
                     <td>
                         <div class="order-label">Full Name:</div>
                     </td>
-                    <td><input type="text" class="input-responsive" name='fullname'></td>
+                    <td><input type="text" value="<?php echo ($email) ?> class=" input-responsive" name='fullname'></td>
                 </tr>
 
                 <tr>
                     <!-- <td>
                         <div class="order-label">Email:</div>
                     </td> -->
-                    <?php
-                    $user_data_query = "SELECT * FROM users WHERE email = '" . $_SESSION['email'] . "'";
-                    $run_query = mysqli_query($conn, $user_data_query);
-                    $count = mysqli_num_rows($run_query);
-                    if ($count == 1) {
-                        $get_row = mysqli_fetch_assoc($run_query);
-                        $name = $get_row['username'];
-                        $email = $get_row['email'];
-                    } else {
-                        $name = "";
-                        $email = "";
-                    }
 
-                    ?>
                     <td><input type="hidden" class="input-responsive" value="<?php echo ($email) ?>" name='email'></td>
                 </tr>
 
